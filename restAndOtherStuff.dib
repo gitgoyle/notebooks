@@ -1,0 +1,17 @@
+#!html
+
+#!html
+<h1>Get a bearer token</h1>
+#!pwsh
+$Body = @{"userName"="msalvidio@msn.com" ; "password" ="Garg1234!"}
+
+$Request = @{
+    Method="POST"
+    Uri="https://inkng7coreauth20190716083031.azurewebsites.net/api/auth/login"
+    Body=($Body|ConvertTo-Json)
+    ContentType="application/json"
+}
+$x=0
+Invoke-RestMethod @Request | Write-Output 
+#!html
+<a href="https://salvid.io/images/sharedimages/vvg.jpg">cool image</a>
